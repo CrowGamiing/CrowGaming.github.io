@@ -1,0 +1,258 @@
+/* -------------------- Estilos Generales -------------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: flex-start; /* Alinea al principio de la pantalla */
+    min-height: 100vh; 
+    margin: 0;
+    padding: 40px 15px; /* Más padding superior */
+    background: linear-gradient(135deg, #1a1a2e, #272744); /* Fondo degradado sutil */
+    color: #e0e0e0; /* Texto Gris claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease; /* Transición para el cambio de tema */
+}
+
+/* -------------------- Contenedor Principal (para la tarjeta) -------------------- */
+.main-card {
+    background-color: #2e2e4a; /* Fondo de la tarjeta */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px; /* Ancho máximo similar al ejemplo */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición para el cambio de tema */
+}
+
+/* -------------------- Perfil -------------------- */
+.perfil-contenedor {
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #70a1ff; /* Borde más sutil */
+    box-shadow: 0 0 10px rgba(112, 161, 255, 0.5); /* Sombra más suave */
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1 {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* ESTILO AÑADIDO PARA LA INSIGNIA DE CREADOR */
+.creator-badge {
+    width: 150px; /* Ancho deseado para la imagen */
+    height: auto;
+    margin: 10px auto 5px auto; /* Espacio arriba, centrado, y espacio abajo */
+    display: block; /* Asegura que tome el ancho y se centre */
+}
+
+.subtitulo {
+    font-size: 0.9em;
+    color: #b0b0b0;
+    margin-top: 5px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+/* -------------------- Sección de Texto/Bienvenida -------------------- */
+.texto-bienvenida {
+    margin-bottom: 30px;
+}
+
+.texto-bienvenida h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.texto-bienvenida p {
+    font-size: 0.95em;
+    margin: 5px 0;
+    color: #c0c0c0;
+    transition: color 0.3s ease;
+}
+
+/* -------------------- Contenedor de Enlaces Principales -------------------- */
+.enlaces-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para los botones */
+    gap: 15px; /* Espacio entre botones */
+    margin-bottom: 30px;
+}
+
+.enlace-boton {
+    display: flex; /* Para centrar el texto dentro del botón */
+    justify-content: center;
+    align-items: center;
+    padding: 12px 10px;
+    background-color: #3e3e60; /* Color de botón */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 0.95em;
+    font-weight: 600;
+    border: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.enlace-boton:hover {
+    background-color: #525281;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* -------------------- Contenedor de Iconos de Redes Sociales (abajo) -------------------- */
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre iconos */
+    margin-top: 30px; /* Separación de los botones principales */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
+    padding-top: 25px;
+    transition: border-top 0.3s ease;
+}
+
+/* NUEVOS ESTILOS PARA IMAGENES/ICONOS Y REEMPLAZANDO LOS VIEJOS DE EMOJIS */
+
+/* Estilo base para el enlace social (contenedor de la imagen o del emoji) */
+.enlace-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    
+    /* Estilos de respaldo para el emoji si se mantiene alguno */
+    color: #b0b0b0; 
+    font-size: 2.2em; 
+}
+
+/* Estilo para las etiquetas IMG que ahora contienen los iconos */
+.icono-img {
+    width: 40px; /* Tamaño del icono */
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+/* Efecto hover en el enlace (para los emojis, si quedan) */
+.enlace-social:hover {
+    color: #70a1ff; /* Color al pasar el ratón para emojis */
+    transform: translateY(-3px);
+}
+
+/* Efecto hover específico para la imagen dentro del enlace */
+.enlace-social:hover .icono-img {
+    transform: translateY(-3px) scale(1.05); /* Sutilmente hacia arriba y más grande */
+}
+
+/* -------------------- Estilos del Footer de Copyright (NUEVO) -------------------- */
+.footer-copyright {
+    margin-top: 30px; /* Separación de los iconos */
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
+    font-size: 0.75em;
+    color: #909090; /* Gris más oscuro para el copyright */
+    font-weight: 300;
+    transition: color 0.3s ease, border-top 0.3s ease;
+}
+
+
+/* -------------------- Estilos del Botón de Alternar Tema (NUEVO) -------------------- */
+.toggle-button {
+    background-color: #525281; /* Un color que contraste */
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 20px; /* Separación de la tarjeta principal */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button:hover {
+    background-color: #70a1ff;
+}
+
+
+/* ========================================================================= */
+/* -------------------- Estilos para el Modo Claro (light-mode) -------------------- */
+/* ========================================================================= */
+
+/* Fondo general y texto */
+body.light-mode {
+    background: linear-gradient(135deg, #f0f0f5, #e0e0e0); /* Fondo degradado claro */
+    color: #333333; /* Texto oscuro */
+}
+
+/* Botón de tema en modo claro */
+body.light-mode .toggle-button {
+    background-color: #d0d0d0;
+    color: #1a1a1a;
+}
+body.light-mode .toggle-button:hover {
+    background-color: #b0b0b0;
+}
+
+
+/* Tarjeta principal */
+body.light-mode .main-card {
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos y Subtítulos */
+body.light-mode h1,
+body.light-mode .texto-bienvenida h2 {
+    color: #1a1a1a; /* Títulos muy oscuros */
+}
+
+body.light-mode .subtitulo,
+body.light-mode .texto-bienvenida p {
+    color: #555555; /* Texto más oscuro */
+}
+
+/* Borde del Avatar */
+body.light-mode .avatar {
+    border: 3px solid #3e3e60; /* Borde oscuro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de Enlace */
+body.light-mode .enlace-boton {
+    background-color: #e0e0e0; /* Botón gris claro */
+    color: #1a1a1a; /* Texto oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .enlace-boton:hover {
+    background-color: #cccccc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Líneas divisorias e iconos */
+body.light-mode .iconos-redes,
+body.light-mode .footer-copyright {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Copyright */
+body.light-mode .footer-copyright {
+    color: #777777; 
+}
